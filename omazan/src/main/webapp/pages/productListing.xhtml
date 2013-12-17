@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>PRODUCTS</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="../resources/css/styles.css"
+		type="text/css" media="screen" />
+</h:head>
+<h:body>
+    <script src="jquery.js"></script>
+    <script>
+ 
+    // Your code goes here.
+ 
+    </script>
+	<ui:include src="./common/header.xhtml" />
+	<div class="center">
+		<!-- Main Menu -->
+		<ui:include src="./common/menu.xhtml" />
+		<!-- /Main Menu -->
+
+
+		<!-- Main Content -->
+		<div id="page">
+
+			<!-- Left Side Specs -->
+			<div id="leftColumn580">
+				<h:form>
+					<h1 class="blue">
+						<h:commandLink id="edit" value="Click here to edit user info"
+							action="/pages/editUser.xhtml" ajax="false">
+							<f:param name="flow" value="edit"></f:param>
+						</h:commandLink>
+					</h1>
+					<br />
+					<header> Welcome users here are our products</header>
+
+					<h:dataTable id="products" value="#{userMBean.products}"
+						var="product" style="width: 10%">
+						<h:column>
+							<h:graphicImage library="images" name="product.jpg" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Name" />
+							</f:facet>
+							<h:outputText value="#{product.name}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Description" />
+							</f:facet>
+							<h:outputText value="#{product.description}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="quanity" />
+							</f:facet>
+							<h:outputText value="#{product.quantity}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Price" />
+							</f:facet>
+							<h:outputText value="#{product.price}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Order Product" />
+							</f:facet>
+							<h:outputText value="#{product.price}" />
+						</h:column>
+						<h:column>
+							<h:selectBooleanCheckbox value="#{product.productOrdered}" />
+						</h:column>
+
+					</h:dataTable>
+					<br />
+					<h1 class="blue">
+							<h:commandLink id="submit" value="Place Order"
+								action="/pages/placeOrder.xhtml" ajax="false">
+								
+							</h:commandLink>
+				</h1>
+
+				</h:form>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<ui:include src="./common/footer.xhtml" />
+	</div>
+</h:body>
+</html>

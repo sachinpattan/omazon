@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf12839225897960" configfile="/omazan/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="payment.xhtml" x="122" y="178" id="pf128417776012122" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="payment.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" x="122" y="562" id="pf128417779137424" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" path="register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="122" y="946" id="pf128430768814316" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" path="page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/index.xhtml" x="122" y="1330" id="pf13176601503780" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf13830449007684 pf13830449007685" path="/pages/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/welcome.xhtml" x="338" y="1533" id="pf13830449007686" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf13833416539430 pf13833416539431" inlinks="pf13830449007684 pf13833416539430 pf13842817144120 pf13867909309273" path="/pages/productListing.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/error.xhtml" x="554" y="1330" id="pf13830449007687" referenceLink="//@navigationRule.6/@navigationCase.1/@toViewId|" inlinks="pf13830449007685 pf13833416539431 pf13865387820560 pf13867908979770 pf13867909309274" path="/pages/error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/registration.xhtml" x="122" y="1714" id="pf13842817144121" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf13842817144120 pf13867908979770" path="/pages/registration.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/registratio.xhtml" id="pf13842859569864" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" outlinks="pf13842859569865 pf13842859643197" inlinks="pf13842859643197" path="/pages/adminLogon.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/adminWelcome.xhtml" id="pf13842859569866" referenceLink="//@navigationRule.5/@navigationCase.1/@toViewId|" outlinks="pf13856520278780 pf13856521741271" inlinks="pf13842859569865 pf13856520278780" path="/pages/adminWelcome.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/adminDashboardList.xhtml" id="pf13856521741272" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf13856521741271" path="/pages/adminDashboardList.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/productListin.xhtml" id="pf13865387820561" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf13865387820560 pf13865387820562" path="/pages/placeOrder.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/orderSuccess.xhtml" id="pf13865387820563" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" inlinks="pf13865387820562" path="/pages/orderSuccess.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/e.xhtml" id="pf13867909309275" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf13867909309273 pf13867909309274" path="/pages/editUser.xhtml"/>
+  <links id="pf13830449007684" target="pf13830449007686" source="pf13176601503780" outcome="success"/>
+  <links id="pf13830449007685" target="pf13830449007687" source="pf13176601503780" outcome="error"/>
+  <links id="pf13833416539431" target="pf13830449007687" source="pf13830449007686" outcome="error"/>
+  <links id="pf13842817144120" target="pf13830449007686" source="pf13842817144121" outcome="success"/>
+  <links id="pf13833416539430" target="pf13830449007686" source="pf13830449007686" outcome="success">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf13842859569865" target="pf13842859569866" source="pf13842859569864" outcome="success"/>
+  <links id="pf13842859643197" target="pf13842859569864" source="pf13842859569864" outcome="error"/>
+  <links id="pf13856520278780" target="pf13842859569866" source="pf13842859569866" outcome="error"/>
+  <links id="pf13856521741271" target="pf13856521741272" source="pf13842859569866" outcome="success"/>
+  <links id="pf13865387820560" target="pf13830449007687" source="pf13865387820561" outcome="error"/>
+  <links id="pf13865387820562" target="pf13865387820563" source="pf13865387820561" outcome="success"/>
+  <links id="pf13867908979770" target="pf13830449007687" source="pf13842817144121" outcome="error"/>
+  <links id="pf13867909309273" target="pf13830449007686" source="pf13867909309275" outcome="success"/>
+  <links id="pf13867909309274" target="pf13830449007687" source="pf13867909309275" outcome="error"/>
+</pageflow:Pageflow>

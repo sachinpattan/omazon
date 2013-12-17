@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Welcome to Omazan !</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="../resources/css/styles.css" type="text/css" media="screen"/>
+</h:head>
+
+<h:body>
+	
+	<ui:include src="header.xhtml" />
+	
+	<div class="center">
+		<ui:include src="menu.xhtml" />
+		
+		<div id="page">
+			<div id="leftColumn200">
+				<ul>
+					<li>					
+						<h:form>
+							<h:commandLink action="#{orderMBean.getAllOrders}" value="Orders" />
+			            </h:form>
+					</li>
+					<li><a href="#" />Accounts</li>
+					<li><a href="#" />Shipments</li>
+				</ul>
+				
+				<div class="promo">
+					<a href="">
+						<img src="../resources/images/promo-200x150.gif" />
+					</a>
+				</div>
+			</div>
+			
+			<div class="account">
+	            <div class="accountInfo">
+					<h:form>
+						<h:commandLink action="#{orderMBean.getAllOrders}" value="Show Pending Orders" />
+		            </h:form>
+				</div>
+			</div>		
+		
+		</div>
+	</div>
+	
+	<div id="footer">
+		<ui:include src="footer.xhtml" />
+	</div>
+</h:body>
+</html>
